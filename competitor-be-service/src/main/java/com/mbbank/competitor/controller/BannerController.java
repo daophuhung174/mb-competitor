@@ -1,5 +1,6 @@
 package vn.com.mb.ai.competitor.controller;
 
+import com.mbbank.competitor.dto.BannerResponse;
 import vn.com.mb.ai.competitor.dto.BannerRequest;
 import vn.com.mb.ai.competitor.entity.Banner;
 import vn.com.mb.ai.competitor.repository.BannerRepository;
@@ -17,7 +18,7 @@ public class BannerController {
     private final BannerService bannerService;
 
     @PostMapping("/create")
-    public void create(@RequestBody BannerRequest bannerRequest){
-        bannerService.save(bannerRequest);
+    public BannerResponse create(@RequestBody BannerRequest bannerRequest){
+        return bannerService.save(bannerRequest);
     }
 }
