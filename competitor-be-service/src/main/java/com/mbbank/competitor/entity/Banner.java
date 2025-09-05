@@ -7,6 +7,8 @@ import lombok.*;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 import org.springframework.data.mongodb.core.mapping.MongoId;
+import vn.com.mb.ai.competitor.common.dto.AuditDTO;
+import vn.com.mb.ai.competitor.common.jpa.entity.AuditEntity;
 
 import java.time.LocalDate;
 import java.util.UUID;
@@ -18,7 +20,7 @@ import java.util.UUID;
 @Builder
 @Entity
 //@Document(collection = "banner")
-public class Banner {
+public class Banner extends AuditEntity {
 //    @MongoId
     @Id
     @Field(name = "_id")
