@@ -24,7 +24,7 @@ public class Banner extends AuditEntity {
 //    @MongoId
     @Id
     @Field(name = "_id")
-    @Builder.Default
+//    @Builder.Default
     private String id = UUID.randomUUID().toString();
     @Field(name = "name")
     @Column(nullable = false, unique = true)

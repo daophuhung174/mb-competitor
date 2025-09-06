@@ -6,4 +6,5 @@ import lombok.Data;
 public class BannerRequest {
     private String name;
     private String link;
+    private String description;
 }

@@ -1,5 +1,8 @@
 package vn.com.mb.ai.competitor.common.jpa.entity;
 
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedBy;
@@ -15,6 +18,9 @@ import java.time.Instant;
 /**
  * @author hungdp
  */
+//@Getter
+//@Setter
+//@Builder
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
 public class AuditEntity {
