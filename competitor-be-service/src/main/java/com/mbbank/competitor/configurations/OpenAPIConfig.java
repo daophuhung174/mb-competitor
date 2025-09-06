@@ -1,6 +1,6 @@
-package vn.com.mb.ai.competitor.configurations;
+package com.mbbank.competitor.configurations;
 
-import vn.com.mb.ai.competitor.dto.BaseResponse;
+import com.mbbank.competitor.dto.BaseResponse;
 import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.Operation;

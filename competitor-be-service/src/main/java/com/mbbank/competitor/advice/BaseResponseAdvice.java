@@ -1,5 +1,6 @@
 package com.mbbank.competitor.advice;
 
+import com.mbbank.competitor.dto.BaseResponse;
 import lombok.AllArgsConstructor;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.MediaType;
@@ -29,7 +30,7 @@ public class BaseResponseAdvice implements ResponseBodyAdvice<Object> {
         String clientMessageId = request.getHeaders().getFirst(CLIENT_MESSAGE_ID);
         String requestUri = request.getURI().toString();
 
-        vn.com.mb.ai.competitor.dto.BaseResponse<Object> baseResponse = vn.com.mb.ai.competitor.dto.BaseResponse.ok(clientMessageId, requestUri, body);
+        BaseResponse<Object> baseResponse = BaseResponse.ok(clientMessageId, requestUri, body);
 
         return ResponseEntity.ok(baseResponse).getBody();
     }

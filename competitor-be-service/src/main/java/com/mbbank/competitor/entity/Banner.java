@@ -1,13 +1,10 @@
-package vn.com.mb.ai.competitor.entity;
+package com.mbbank.competitor.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.*;
-import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
-import org.springframework.data.mongodb.core.mapping.MongoId;
-import vn.com.mb.ai.competitor.common.dto.AuditDTO;
 import vn.com.mb.ai.competitor.common.jpa.entity.AuditEntity;
 
 import java.time.LocalDate;

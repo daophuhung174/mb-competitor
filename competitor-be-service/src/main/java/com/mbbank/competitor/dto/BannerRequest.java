@@ -1,4 +1,4 @@
-package vn.com.mb.ai.competitor.dto;
+package com.mbbank.competitor.dto;
 
 import lombok.Data;
 

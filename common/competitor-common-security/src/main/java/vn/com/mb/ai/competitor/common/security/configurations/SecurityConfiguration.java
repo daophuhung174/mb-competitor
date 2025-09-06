@@ -2,8 +2,10 @@ package vn.com.mb.ai.competitor.common.security.configurations;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.security.SecurityProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.annotation.Order;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -45,6 +47,7 @@ public class SecurityConfiguration {
     }
 
     @Bean
+//    @Order(SecurityProperties.BASIC_AUTH_ORDER)
     public SecurityFilterChain defaultFilterChain(HttpSecurity httpSecurity) throws Exception {
         return httpSecurity
                 .cors(httpSecurityCorsConfigurer -> httpSecurityCorsConfigurer.configurationSource(corsConfigurationSource()))
@@ -58,7 +61,7 @@ public class SecurityConfiguration {
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth -> auth.requestMatchers("/error", "/actuator/**", "/swagger-ui/**", "/v3/api-docs/**", "/public/**").permitAll()
                         .anyRequest().authenticated())
-                .oauth2ResourceServer((oauth2)-> oauth2.jwt(jwt-> jwt.jwtAuthenticationConverter(jwtConverter)))
+//                .oauth2ResourceServer((oauth2)-> oauth2.jwt(jwt-> jwt.jwtAuthenticationConverter(jwtConverter)))
                 .formLogin(AbstractHttpConfigurer::disable)
                 .httpBasic(AbstractHttpConfigurer::disable)
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)

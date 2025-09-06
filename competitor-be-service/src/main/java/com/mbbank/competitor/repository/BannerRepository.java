@@ -1,6 +1,6 @@
-package vn.com.mb.ai.competitor.repository;
+package com.mbbank.competitor.repository;
 
-import vn.com.mb.ai.competitor.entity.Banner;
+import com.mbbank.competitor.entity.Banner;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.mongodb.repository.MongoRepository;
 

@@ -1,4 +1,4 @@
-package vn.com.mbbank.aicenter.beegen.portal.constant.document;
+package com.mbbank.competitor.constant;
 
 import lombok.experimental.FieldNameConstants;
 

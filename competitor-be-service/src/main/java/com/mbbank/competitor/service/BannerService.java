@@ -1,11 +1,11 @@
-package vn.com.mb.ai.competitor.service;
+package com.mbbank.competitor.service;
 
+import com.mbbank.competitor.dto.BannerRequest;
 import com.mbbank.competitor.dto.BannerResponse;
+import com.mbbank.competitor.entity.Banner;
+import com.mbbank.competitor.repository.BannerRepository;
 import lombok.extern.slf4j.Slf4j;
 import vn.com.mb.ai.competitor.common.security.SecurityService;
-import vn.com.mb.ai.competitor.dto.BannerRequest;
-import vn.com.mb.ai.competitor.entity.Banner;
-import vn.com.mb.ai.competitor.repository.BannerRepository;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
@@ -20,7 +20,7 @@ public class BannerService {
     public BannerResponse save(BannerRequest banner){
         String userId = securityService.getCurrentUser().getUserId();
         log.info("Saving banner with userId {}", userId);
-        Banner bannerEntity = mapper.map(banner,Banner.class);
+        Banner bannerEntity = mapper.map(banner, Banner.class);
         bannerRepository.save(bannerEntity);
         return mapper.map(bannerEntity,BannerResponse.class);
     }

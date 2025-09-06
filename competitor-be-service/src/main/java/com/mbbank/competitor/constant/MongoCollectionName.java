@@ -1,4 +1,4 @@
-package vn.com.mbbank.aicenter.beegen.portal.constant;
+package com.mbbank.competitor.constant;
 
 public class MongoCollectionName {
 

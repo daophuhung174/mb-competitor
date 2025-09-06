@@ -1,11 +1,9 @@
-package vn.com.mb.ai.competitor.controller;
+package com.mbbank.competitor.controller;
 
 import com.mbbank.competitor.advice.WrappedWithBaseResponse;
+import com.mbbank.competitor.dto.BannerRequest;
 import com.mbbank.competitor.dto.BannerResponse;
-import vn.com.mb.ai.competitor.dto.BannerRequest;
-import vn.com.mb.ai.competitor.entity.Banner;
-import vn.com.mb.ai.competitor.repository.BannerRepository;
-import vn.com.mb.ai.competitor.service.BannerService;
+import com.mbbank.competitor.service.BannerService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

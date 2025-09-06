@@ -8,8 +8,8 @@ import org.springframework.context.annotation.ComponentScan;
  * @author hungdp
  */
 @AutoConfiguration
-@ComponentScan("vn.com.mbbank.aicenter.beegen.common.web")
-@EnableFeignClients(basePackages = "vn.com.mbbank.aicenter.beegen.common.web.feign")
+@ComponentScan("vn.com.mb.ai.competitor.common.web")
+@EnableFeignClients(basePackages = "vn.com.mb.ai.competitor.web.feign")
 public class BeeGenWebEnableAutoConfiguration {
 
 }

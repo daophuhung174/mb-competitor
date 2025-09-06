@@ -7,6 +7,6 @@ import org.springframework.context.annotation.ComponentScan;
  * @author hungdp
  */
 @AutoConfiguration
-@ComponentScan("vn.com.mbbank.aicenter.beegen.common.security")
+@ComponentScan("vn.com.mb.ai.competitor.common.security")
 public class BeeGenSecurityEnableAutoConfiguration {
 }
